@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int rollNo;
+    double marks;
+
+    
+    void inputData() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter student name: ");
+        name = sc.nextLine();
+        System.out.print("Enter roll number: ");
+        rollNo = sc.nextInt();
+        System.out.print("Enter marks: ");
+        marks = sc.nextDouble();
+        sc.close();
+    }
+
+   void displayResult() {
+        System.out.println("\n--- Student Result ---");
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Marks: " + marks);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.inputData();
+        s1.displayResult();
+        
+    }
+}
