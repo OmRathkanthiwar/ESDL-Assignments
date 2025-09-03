@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class SimpleInterest {
+
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Enter principle amount");
+        int principle = myObj.nextInt();
+        System.out.println("Enter number of years");
+        int year = myObj.nextInt();
+        System.out.println("Enter rate of interest");
+        int interest = myObj.nextInt();
+        double amount = (principle + (principle/interest)*year);
+        System.out.println("Final amount");
+        System.out.println(amount);
+        myObj.close();
+    }
+}
