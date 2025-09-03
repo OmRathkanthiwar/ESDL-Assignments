@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Array {
+    public static void main(String[] args) {
+        int[] marks = new int[5];
+        int sum = 0;
+        float average;
+
+        Scanner myObj = new Scanner(System.in);  
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Enter marks");
+            marks[i] = myObj.nextInt();
+            sum += marks[i];
+        }
+
+        myObj.close();  
+
+        average = (float) sum / 5;   
+        System.out.println("Sum of all marks : " + sum);
+        System.out.println("Average of all marks : " + average);
+    }
+}
