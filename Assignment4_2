@@ -1,0 +1,18 @@
+//Area of rectangle
+import java.util.Scanner;
+
+public class UserArea {
+
+    public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Enter length");
+        int length = myObj.nextInt();
+        Scanner myObj2 = new Scanner(System.in);
+        System.out.println("Enter breadth");
+        double breadth = myObj.nextDouble();
+        double area = (length*breadth);
+        System.out.println(area);
+        myObj.close();
+        myObj2.close();
+    }
+}
