@@ -1,0 +1,38 @@
+class Book {
+    String title;
+    String author;
+    double price;
+
+    Book(String t) {
+        title = t;
+        author = "Unknown";
+        price = 0.0;
+    }
+
+    Book(String t, String a) {
+        title = t;
+        author = a;
+        price = 0.0;
+    }
+
+    Book(String t, String a, double p) {
+        title = t;
+        author = a;
+        price = p;
+    }
+
+    void displayBook() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        Book b1 = new Book("Java Basics");
+        Book b2 = new Book("OOP Concepts", "James Gosling");
+        Book b3 = new Book("Data Structures", "Herbert Schildt", 450.50);
+
+        System.out.println("\n--- Book Details ---");
+        b1.displayBook();
+        b2.displayBook();
+        b3.displayBook();
+    }
+}
