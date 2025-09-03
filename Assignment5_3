@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapp {
+    public static void main(String[] args) {
+        HashMap<Integer, Integer> students = new HashMap<>();
+        Scanner myObj = new Scanner(System.in);
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter roll no: ");
+            int rollNo = myObj.nextInt();
+            myObj.nextLine();
+
+            System.out.print("Enter marks: ");
+            int marks = myObj.nextInt();
+            myObj.nextLine();
+
+            students.put(rollNo, marks);
+        }
+
+        myObj.close();
+
+        System.out.println("Roll Number : Marks : Status");
+        for (Integer roll : students.keySet()) {
+            int marks = students.get(roll);
+            String status = "";
+
+            if (marks > 80) {
+                status = "Distinction";
+            } else if (marks < 35) {
+                status = "Fail";
+            } else {
+                status = "Pass";
+            }
+
+            System.out.println(roll + " : " + marks + " : " + status);
+        }
+    }
+}
